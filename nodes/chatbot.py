@@ -1,8 +1,7 @@
-from langchain.chat_models import init_chat_model
-from state import State
+from models.openai_model import OpenAIModel
+from state.state import State
 
-
-llm = init_chat_model("openai:gpt-4.1")
 
 def chatbot(state: State):
-    
+    model = OpenAIModel()
+    return { "messages": [model.llm_with_tools.invoke(state["messages"])] }
