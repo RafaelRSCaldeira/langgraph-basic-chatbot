@@ -1,6 +1,6 @@
 from state.state import InputState, OverallState
 
-def initial_node(state):
+def initial_node(state: InputState):
     """Processes the input name and generates initial response."""
     print("Estado inicial: ", state)
     return OverallState({
