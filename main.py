@@ -11,6 +11,8 @@ def main():
             user_input = input("User: ")
             stream_graph_updates(user_input)
         except:
+            import traceback
+            traceback.print_exc()
             break
 
 
