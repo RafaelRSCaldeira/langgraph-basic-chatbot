@@ -1,6 +1,5 @@
 from pydantic import BaseModel, Field
 from langchain_core.tools import tool
-import asyncio
 
 class MessageInput(BaseModel):
     message: str = Field(description="message text that will be sent to user")
